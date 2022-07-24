@@ -1,0 +1,96 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100&family=Lora:ital@1&family=Mulish:wght@1,900&display=swap'); */
+
+:root {
+    font-family: 'Kantumruy Pro', sans-serif;
+    --bg-clr: #f9e59f;
+
+}
+
+
+
+/* =====
+    form itself
+   =====*/
+
+body {
+    display: flex;
+    background-color: var(--bg-clr)
+}
+
+
+
+
+form {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.checkboxes {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3, auto);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.checkboxes + label {
+    background-color: cyan;
+    padding: 5px;
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+}
+
+
+.check-with-label:checked+.label-for-check {
+    font-weight: bold;
+    background-color: red;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* padding: ; */
+}
+
+/* =====
+  side panel 
+     =======*/
+.sidepanel {
+    width: clamp(12vw, 25vw, 33vw);
+    margin-left: 2vw;
+    margin-top: 2vw;
+    
+}
+
+.slogan {
+    
+    /* max-width: calc(.sidepanel * .8); */
+    max-width: 18vw;
+    word-wrap: normal;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Work Sans';
+    text-transform: uppercase;
+
+}
+
+.slogan > span:first-child {
+    /* color: var(--bg-clr); */
+   /*  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+.slogan > span:last-child {
+background-color: var(--bg-clr);
+}

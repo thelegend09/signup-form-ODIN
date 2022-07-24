@@ -6,49 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100&family=Lora:ital@1&family=Mulish:ital,wght@1,900&display=swap" rel="stylesheet">
     <title>Sign up!</title>
 </head>
 
 <body>
     <div class="sidepanel">
-        <a href="#"><img src="#" alt="reakzo logo"></a>
+        <a href="#"><img src="..\R logo.svg" alt="reakzo logo" width="36px"></a>
         <p class="slogan">At <span>REAKZO</span> we make your website <span>stand out</span>.</p>
     </div>
     <div class="signup-form">
         <form action="post">
-
-            <h1>Previous Website Experience</h1>
-            <div class="checkboxes">
-                <input type="checkbox" name="none" id="none">
-                <label for="none">None</label>
-                <input type="checkbox" name="wordpress" id="wordpress">
-                <label for="wordpress">Wordpress</label>
-                <input type="checkbox" name="squarespace" id="squarespace">
-                <label for="squarespace">SquareSpace</label>
-                <input type="checkbox" name="wix" id="wix">
-                <label for="wix">Wix</label>
-                <input type="checkbox" name="joomla" id="joomla">
-                <label for="joomla">Joomla</label>
-                <input type="checkbox" name="drupal" id="drupal">
-                <label for="drupal">Drupal</label>
-            </div>
-
-
-            <input type="text" name="first-name" id="first-name">
-            <label for="first-name">First Name</label>
-
-            <input type="text" name="last-name" id="last-name">
-            <label for="last-name">Last Name</label>
-
-            <input type="email" name="email" id="email">
-            <label for="email">Email</label>
-
-            <input type="password" name="pwd" id="pwd">
-            <label for="pwd">Password</label>
-
+            <h1>Sign up here</h1>
+            <h2>Previous Website Experience</h1>
             
-            <input type="password" name="pwd-confirm" id="pwd-confirm">
+                <ul class="checkboxes">
+                    <li><label class="label-for-check" for="none">None</label>
+                        <input class="check-with-label" type="checkbox" name="none" id="none"></li>
+                    <li><label for="wordpress">Wordpress</label>
+                        <input type="checkbox" name="wordpress" id="wordpress"></li>
+                    <li><label for="squarespace">SquareSpace</label>
+                        <input type="checkbox" name="squarespace" id="squarespace"></li>
+                    <li><label for="wix">Wix</label>
+                        <input type="checkbox" name="wix" id="wix"></li>
+                    <li><label for="joomla">Joomla</label>
+                        <input type="checkbox" name="joomla" id="joomla"></li>
+                    <li><label for="drupal">Drupal</label>
+                        <input type="checkbox" name="drupal" id="drupal"></li>
+
+                </ul>
+
+                <div>
+                    <input type="checkbox" class="check-with-label" id="idinput" />
+                    <label class="label-for-check" for="idinput">My Label</label>
+                  </div>
+
+
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+
+            <label for="pwd">Password</label>
+            <input type="password" name="pwd" id="pwd">
+
+
             <label for="pwd-confirm">Confirm Password</label>
+            <input type="password" name="pwd-confirm" id="pwd-confirm">
             <p class="pwd-explanation">Password must contain:
                 <ul>
                     <li>At least eight characters</li>
@@ -59,9 +69,9 @@
             </p>
 
             <!-- how to add a little "REQUIRED"? -->
-            
+
             <button type="submit">Create Account</button>
-            <p class="log-in">Already have an account?<a href="#">Log in</a></p>
+            <p class="log-in">Already have an account? <a href="#">Log in</a></p>
         </form>
     </div>
 </body>
