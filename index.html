@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/img/logo.svg">
+    
 
     <title>Sign up!</title>
 </head>
@@ -19,7 +20,7 @@
         </div>
         <div class="signup-form">
 
-            <form action="https://httpbin.org/post" method="post">
+            <form class="the-form" action="https://httpbin.org/post" method="post">
                 <h1>Sign Up</h1>
                 <h2>Previous Website Experience</h1>
 
@@ -55,26 +56,25 @@
 
                     <div class="form-fields">
                         <h2><label for="first-name">First Name</label></h2>
-                        <input type="text" name="first-name" id="first-name" required placeholder="Jack">
+                        <input type="text" name="first-name" id="first-name" minlength="3" required placeholder="Jack">
 
                         <h2><label for="last-name">Last Name</label></h2>
                         <input type="text" name="last-name" id="last-name" placeholder="Sparrow">
 
                         <h2><label for="email">Email</label></h2>
-                        <input type="email" name="email" id="email" required placeholder="CptJack@BlackPearl.com">
+                        <input type="email" name="email" id="email" minlength="5" required placeholder="CptJack@BlackPearl.com">
 
                         <h2><label for="pwd">Password</label></h2>
-                        <input type="password" name="pwd" id="pwd" required>
+                        <input type="password" name="pwd" id="pwd" minlength="6" required>
 
 
                         <h2><label for="pwd-confirm">Confirm Password</label></h2>
-                        <input type="password" name="pwd-confirm" id="pwd-confirm" required>
+                        <input pattern="(?=.*\d)(?=.*[A-Z]).{6,}" type="password" name="pwd-confirm" minlength="6" id="pwd-confirm" required>
                         <div class="pwd-explanation">Password must contain:
                             <ul>
-                                <li>At least eight characters</li>
-                                <li>One upper-case character</li>
+                                <li>At least six characters</li>
+                                <li>One uppercase character</li>
                                 <li>One number</li>
-                                <li>One symbol</li>
                             </ul>
                         </div>
                     </div>
