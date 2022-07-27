@@ -59,17 +59,17 @@
                         <input type="text" name="first-name" id="first-name" minlength="3" required placeholder="Jack">
 
                         <h2><label for="last-name">Last Name</label></h2>
-                        <input type="text" name="last-name" id="last-name" placeholder="Sparrow">
+                        <input type="text" name="last-name" required id="last-name" placeholder="Sparrow">
 
                         <h2><label for="email">Email</label></h2>
                         <input type="email" name="email" id="email" minlength="5" required placeholder="CptJack@BlackPearl.com">
 
                         <h2><label for="pwd">Password</label></h2>
-                        <input pattern="(?=.*\d)(?=.*[A-Z]).{6,}" type="password" name="pwd" id="pwd" minlength="6" required>
+                        <input pattern="(?=.*\d)(?=.*[A-Z]).{6,}" placeholder=" " type="password" name="pwd" id="pwd" minlength="6" required>
 
 
                         <h2><label for="pwd-confirm">Confirm Password</label></h2>
-                        <input pattern="(?=.*\d)(?=.*[A-Z]).{6,}" type="password" name="pwd-confirm" minlength="6" id="pwd-confirm" required>
+                        <input pattern="(?=.*\d)(?=.*[A-Z]).{6,}" type="password" placeholder=" " name="pwd-confirm" minlength="6" id="pwd-confirm" required>
                         <div class="pwd-explanation">Password must contain:
                             <ul>
                                 <li>At least six characters</li>
@@ -84,7 +84,8 @@
                     <p class="log-in">Already have an account? <a href="#">Log in</a></p>
             </form>
         </div>
-    <div class="empty-div"></div>
+    <div class="empty-div">
+        </div>
     </div>
 
 </body>
