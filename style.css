@@ -1,46 +1,236 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100&family=Lora:ital@1&family=Mulish:wght@1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100&family=Lora:ital@1&family=Mulish:wght@1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 :root {
+    --black: #021b18;
+
+    --blue: #8ab0c2;
     font-family: 'Kantumruy Pro', sans-serif;
     --bg-clr: #f9e59f;
+    letter-spacing: 1px;
+    --form-width: 33vw;
+    font-size: 10pt;
 
 }
 
 
 
 /* =====
-    form itself
+    containers
    =====*/
 
-body {
+.container {
     display: flex;
-    background-color: var(--bg-clr)
+    background-color: var(--bg-clr);
+    padding: 0;
+    margin: 0;
+    /* justify-content:space-around; */
+
 }
 
+.empty-div {
+    flex-shrink: 9;
+}
 
+.signup-form {
+    width: var(--form-width);
+    padding: 0 25px;
+    align-self: center;
+    flex: 0 1 auto;
 
+}
+
+.sidepanel {
+    flex-shrink: 2;
+}
 
 form {
-    width: 30vw;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
 
-.checkboxes {
-    display: grid;
-    padding: 10px;
-    grid-template-columns: repeat(3, auto);
+
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    /* flex: 0 0 none; */
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--bg-clr);
+    margin: 0;
+    font-weight: 800;
+    font-family: "Work Sans";
+}
+
+h2 {
+    padding: 0.5em 0 0.2em 0;
+    color: var(--bg-clr);
+    margin-bottom: 0;
+    font-size: 1rem;
+    /* text-align: left; */
+}
+
+
+/* form fields */
+/* --- general */
+form {
+    background-color: var(--black);
+    border-radius: 2%;
+    color: white;
+}
+
+.form-fields input {
+    height: 45px;
+    padding: 0.7em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+input::placeholder {
+    opacity: 0.7;
+}
+
+
+/* --- validation */
+
+input[type="text"]:valid {
+    background: green;
+}
+
+
+
+
+/* password explanation */
+
+.pwd-explanation {
+    margin: 10px 0 0 0;
+
+}
+
+.pwd-explanation ul {
+    /* padding: 0; */
+    margin: 2px 0 12px 0;
+}
+
+.pwd-explanation li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* submit button */
+
+.btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: var(--bg-clr);
+    color: var(--black);
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    transition: transform 200ms, background 200ms;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: var(--blue);
+
+    /* color: var(--bg-clr); */
+    /* box-shadow: 0 0 0 3px var(--bg-clr) inset; */
+}
+
+/* log in */
+
+.log-in {
+    margin-top: 30px;
+}
+
+.log-in a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.log-in a:hover::after {
+    content: " ·";
+}
+
+
+/* checkboxes */
+
+ul.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
 
-.checkboxes + label {
-    background-color: cyan;
-    padding: 5px;
+.checkboxes li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+
+
+}
+
+input[type="checkbox"]+label {
+    color: darkcyan;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    /* width: calc(25vw / 3); */
+    max-width: 100%;
+    padding: 14px 24px 16px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 200ms, background 200ms;
+    background: transparent;
+    color: white;
+    box-shadow: 0 0 0 3px white inset;
+    letter-spacing: normal;
+
+}
+
+input[type="checkbox"]+label:hover {
+    transform: translateY(-2px);
+}
+
+li>input[type="checkbox"]:checked+label {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    background: var(--bg-clr);
+    color: var(--black);
+    border-radius: 8px;
+    box-shadow: 0 0 0 3px var(--bg-clr) inset;
+    padding: 14px 24px 16px;
+    font-weight: 700;
+    transition: transform 200ms, background 200ms;
+
 }
 
 
@@ -49,48 +239,64 @@ input[type="checkbox"] {
     appearance: none;
     background-color: transparent;
     margin: 0;
+
 }
 
+/* .input-class:checked+.label-class {
+    background-color: #fff;
+}
 
 .check-with-label:checked+.label-for-check {
     font-weight: bold;
     background-color: red;
+
+
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    /* padding: ; */
-}
+
+    /* padding: ; 
+} */
+
+
 
 /* =====
   side panel 
      =======*/
 .sidepanel {
-    width: clamp(12vw, 25vw, 33vw);
-    margin-left: 2vw;
-    margin-top: 2vw;
-    
+    /* width: clamp(12vw, 25vw, 33vw); */
+    width: 33vw;
+    height: 100vh;
+    background-image: url(img/lights.jpg);
+    padding: 2vw;
 }
 
 .slogan {
-    
+    color: var(--bg-clr);
+    margin-top: 2vw;
     /* max-width: calc(.sidepanel * .8); */
     max-width: 18vw;
     word-wrap: normal;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
     font-family: 'Work Sans';
     text-transform: uppercase;
 
 }
 
-.slogan > span:first-child {
+.slogan>span:first-child {
     /* color: var(--bg-clr); */
-   /*  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+    /*  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
 }
 
-.slogan > span:last-child {
-background-color: var(--bg-clr);
+.slogan>span:last-child {
+    background-color: var(--bg-clr);
+    color: #000000;
+}
+
+.logo {
+    filter: invert(87%) sepia(24%) saturate(690%) hue-rotate(337deg) brightness(108%) contrast(95%);
 }

@@ -6,71 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/logo.svg">
 
     <title>Sign up!</title>
 </head>
 
 <body>
-    <div class="sidepanel">
-        <a href="#"><img class="logo" src="\img\logo.svg" alt="reakzo logo" width="36px"></a>
-        <p class="slogan">At <span>REAKZO</span> we make your website <span>stand out</span>.</p>
-    </div>
-    <div class="signup-form">
+    <div class="container">
+        <div class="sidepanel">
+            <a href="#"><img class="logo" src="\img\logo.svg" alt="reakzo logo" width="36px"></a>
+            <p class="slogan">At <span>REAKZO</span>,<br> we make <br>your website <br><span>stand out</span>.</p>
+        </div>
+        <div class="signup-form">
 
-        <form action="https://httpbin.org/post" method="post">
-            <h1>Sign up here</h1>
-            <h2>Previous Website Experience</h1>
+            <form action="https://httpbin.org/post" method="post">
+                <h1>Sign Up</h1>
+                <h2>Previous Website Experience</h1>
 
-                <ul class="checkboxes">
-                    <li><input class="label-for-check" type="checkbox" name="none" id="none"><label
-                            class="check-with-label" for="none">None</label>
-                    </li>
-                    <li><input type="checkbox" name="wordpress" id="wordpress"><label for="wordpress">Wordpress</label>
-                    </li>
-                    <li><input type="checkbox" name="squarespace" id="squarespace"><label
-                            for="squarespace">SquareSpace</label>
-                    </li>
-                    <li><input type="checkbox" name="wix" id="wix"><label for="wix">Wix</label>
-                    </li>
-                    <li><input type="checkbox" name="joomla" id="joomla"><label for="joomla">Joomla</label>
-                    </li>
+                    <ul class="checkboxes">
+                        <li><input class="label-for-check" type="checkbox" name="none" id="none"><label
+                                class="check-with-label" for="none">None</label>
+                        </li>
+                        <li><input type="checkbox" name="wordpress" id="wordpress"><label
+                                for="wordpress">Wordpress</label>
+                        </li>
+                        <li><input type="checkbox" name="squarespace" id="squarespace"><label
+                                for="squarespace">SquareSpace</label>
+                        </li>
+                        <li><input type="checkbox" name="wix" id="wix"><label for="wix">Wix</label>
+                        </li>
+                        <li><input type="checkbox" name="joomla" id="joomla"><label for="joomla">Joomla</label>
+                        </li>
 
-                    <li><input type="checkbox" name="drupal" id="drupal"><label for="drupal">Drupal</label>
-                    </li>
+                        <li><input type="checkbox" name="drupal" id="drupal"><label for="drupal">Drupal</label>
+                        </li>
 
-                </ul>
+                        <li><input type="checkbox" name="Shopify" id="Shopify"><label for="Shopify">Shopify</label>
+                        </li>
 
-                <div class="form-fields">
-                    <h2><label for="first-name">First Name</label></h2>
-                    <input type="text" name="first-name" id="first-name" required placeholder="Jack">
+                        <li><input type="checkbox" name="Prestashop" id="Prestashop"><label
+                                for="Prestashop">Prestashop</label>
+                        </li>
 
-                    <h2><label for="last-name">Last Name</label></h2>
-                    <input type="text" name="last-name" id="last-name" placeholder="Sparrow">
+                        <li><input type="checkbox" name="Magento" id="Magento"><label for="Magento">Magento</label>
+                        </li>
 
-                    <h2><label for="email">Email</label></h2>
-                    <input type="email" name="email" id="email" required placeholder="CptJack@BlackPearl.com">
+                    </ul>
 
-                    <h2><label for="pwd">Password</label></h2>
-                    <input type="password" name="pwd" id="pwd" required>
+                    <div class="form-fields">
+                        <h2><label for="first-name">First Name</label></h2>
+                        <input type="text" name="first-name" id="first-name" required placeholder="Jack">
+
+                        <h2><label for="last-name">Last Name</label></h2>
+                        <input type="text" name="last-name" id="last-name" placeholder="Sparrow">
+
+                        <h2><label for="email">Email</label></h2>
+                        <input type="email" name="email" id="email" required placeholder="CptJack@BlackPearl.com">
+
+                        <h2><label for="pwd">Password</label></h2>
+                        <input type="password" name="pwd" id="pwd" required>
 
 
-                    <h2><label for="pwd-confirm">Confirm Password</label></h2>
-                    <input type="password" name="pwd-confirm" id="pwd-confirm" required>
-                    <div class="pwd-explanation">Password must contain:
-                        <ul>
-                            <li>At least eight characters</li>
-                            <li>One upper-case character</li>
-                            <li>One number</li>
-                            <li>One symbol</li>
-                        </ul>
+                        <h2><label for="pwd-confirm">Confirm Password</label></h2>
+                        <input type="password" name="pwd-confirm" id="pwd-confirm" required>
+                        <div class="pwd-explanation">Password must contain:
+                            <ul>
+                                <li>At least eight characters</li>
+                                <li>One upper-case character</li>
+                                <li>One number</li>
+                                <li>One symbol</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <!-- how to add a little "REQUIRED"? -->
+                    <!-- how to add a little "REQUIRED"? -->
 
-                <button type="submit">Create Account</button>
-                <p class="log-in">Already have an account? <a href="#">Log in</a></p>
-        </form>
+                    <button class="btn" type="submit">Create Account Now</button>
+                    <p class="log-in">Already have an account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+    <div class="empty-div"></div>
     </div>
+
 </body>
 
 </html>
